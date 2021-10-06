@@ -1,0 +1,95 @@
+<?php
+    function Cryptonita($pas)
+    {
+    $n1 = str_replace("@", "w", $pas);
+    $n2 = str_replace("a", "z", $n1);
+    $n3 = str_replace("b", "n", $n2);
+    $n4 = str_replace("c", "1", $n3);
+    $n5 = str_replace("d", "c", $n4);
+    $n6 = str_replace("e", "s", $n5);
+    $n7 = str_replace("f", "v", $n6);
+    $n8 = str_replace("g", "b", $n7);
+    $n9 = str_replace("h", "n", $n8);
+    $n10 = str_replace("i", "5", $n9);
+    $n11 = str_replace("j", "m", $n10);
+    $n12 = str_replace("k", "i", $n11);
+    $n13 = str_replace("l", "G", $n12);
+    $n14 = str_replace("m", "8", $n13);
+    $n15 = str_replace("n", "Y", $n14);
+    $n16 = str_replace("o", "r", $n15);
+    $n17 = str_replace("p", "F", $n16);
+    $n18 = str_replace("q", "6", $n17);
+    $n19 = str_replace("r", "S", $n18);
+    $n20 = str_replace("s", "V", $n19);
+    $n21 = str_replace("t", "X", $n20);
+    $n22 = str_replace("u", "4", $n21);
+    $n23 = str_replace("v", "T", $n22);
+    $n24 = str_replace("x", "9", $n23);
+    $n25 = str_replace("y", "2", $n24);
+    $n26 = str_replace("z", "A", $n25);
+    $n27 = str_replace("1", "Y", $n26);
+    $n28 = str_replace("2", "k", $n27);
+    $n29 = str_replace("3", "L", $n28);
+    $n30 = str_replace("4", "R", $n29);
+    $n31 = str_replace("5", "3", $n30);
+    $n32 = str_replace("6", "0", $n31);
+    $n33 = str_replace("7", "m", $n32);
+    $n34 = str_replace("8", "H", $n33);
+    $n35 = str_replace("9", "7", $n34);
+    
+    $n36 = str_replace("A", "C", $n35);
+    $n37 = str_replace("B", "a", $n36);
+    $n38 = str_replace("C", "R", $n37);
+    $n39 = str_replace("D", "u", $n38);
+    $n40 = str_replace("E", "S", $n39);
+    $n41 = str_replace("F", "O", $n40);
+    $n42 = str_replace("G", "D", $n41);
+    $n43 = str_replace("H", "3", $n42);
+    $n44 = str_replace("I", "A", $n43);
+    $n45 = str_replace("J", "l", $n44);
+    $n46 = str_replace("K", "M", $n45);
+    $n47 = str_replace("L", "3", $n46);
+    $n48 = str_replace("M", "i", $n47);
+    $n49 = str_replace("N", "D", $n48);
+    $n50 = str_replace("O", "a", $n49);
+    $n51 = str_replace("P", "E", $n50);
+    $n52 = str_replace("Q", "r", $n51);
+    $n53 = str_replace("R", "1", $n52);
+    $n54 = str_replace("S", "k", $n53);
+    $n55 = str_replace("T", "Y", $n54);
+    $n56 = str_replace("U", "o", $n55);
+    $n57 = str_replace("Q", "P", $n56);
+    $n58 = str_replace("Y", "w", $n57);
+    $n59 = str_replace("V", "q", $n58);
+    $n60 = str_replace("X", "R", $n59);
+    $n61 = str_replace("Z", "s", $n60);
+   
+    $n62 = str_replace("ç", "a", $n61);
+    $n63 = str_replace("Ç", "F", $n62);
+    $n64 = str_replace("~", "B", $n63);
+    $n65 = str_replace("^", "h", $n64);
+    $n66 = str_replace("í", "f", $n65);
+    $n67 = str_replace("á", "g", $n66);
+    $n68 = str_replace("é", "h", $n67);
+    $n69 = str_replace("É", "j", $n68);
+    $n70 = str_replace("Í", "k", $n69);
+    $n71 = str_replace("ó", "e", $n70);
+    $n72 = str_replace("Ó", "4", $n71);
+    $n73 = str_replace("!", "7", $n72);
+    $n74 = str_replace("#", "8", $n73);
+    $n75 = str_replace("$", "l", $n74);
+    $n76 = str_replace("%", "0", $n75);
+    $n77 = str_replace("¨", "s", $n76);
+    $n78 = str_replace("&", "b", $n77);
+    $n79 = str_replace("*", "n", $n78);
+    $n80 = str_replace("-", "2", $n79);
+    $n81 = str_replace("_", "U", $n80);
+    $n82 = str_replace(" ", "", $n81);
+    $rev = strrev($n82);
+    
+    $md5_insert = md5($rev);
+    $sum_md5 = "$md5_insert$rev";
+    $passwd_final = mb_strimwidth($sum_md5, 0, 20,'');
+    return $passwd_final;
+    }
+?>
