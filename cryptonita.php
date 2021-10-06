@@ -1,7 +1,7 @@
 <?php
-    function Cryptonita($pas)
+    function Cryptonita($password)
     {
-    $n1 = str_replace("@", "w", $pas);
+    $n1 = str_replace("@", "w", $password);
     $n2 = str_replace("a", "z", $n1);
     $n3 = str_replace("b", "n", $n2);
     $n4 = str_replace("c", "1", $n3);
@@ -85,11 +85,11 @@
     $n80 = str_replace("-", "2", $n79);
     $n81 = str_replace("_", "U", $n80);
     $n82 = str_replace(" ", "", $n81);
-    $rev = strrev($n82);
+    $reverse = strrev($n82);
     
-    $md5_insert = md5($rev);
-    $sum_md5 = "$md5_insert$rev";
-    $passwd_final = mb_strimwidth($sum_md5, 0, 20,'');
-    return $passwd_final;
+    $md5_insert = md5($reverse);
+    $sum_md5 = "$md5_insert$reverse";
+    $hash = mb_strimwidth($sum_md5, 0, 20,'');
+    return $hash;
     }
 ?>
